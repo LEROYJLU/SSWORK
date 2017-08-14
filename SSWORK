@@ -1,0 +1,41 @@
+size(900, 1200);
+var bbw=0;
+var bbc=0;
+draw=function(){
+
+for(var bw=0;bw<1200;bw++){
+stroke(255-((255/1200)*bw));
+line(0, bw, 900, bw);
+}
+for(bw=0;bw<900;bw++){
+stroke(((255/1200)*(bw+300)));
+line(795, 165+bw, 870, 165+bw);
+}
+fill(((255/1200)*(bw+100)));
+triangle(780, 1065, 885, 1065, 832.5, 1175);
+textFont("Courier");
+textAlign(CENTER);
+textSize(80);
+fill(0);
+text("BLACK CIVIL RIGHTS", 450, 100);
+textSize(32);
+text("The Birmingham Campaign", 385, 180);
+textSize(19);
+text("Taking place in Birmingham, and so its name, this was a series of peaceful protests launched by activists who wanted change. The thing that caused this campaign to be so successful was that these peaceful protests would be met with highly violent responses, like police dogs, fire hoses which had tremendously high pressure, and of course, the normal set of arrests. However, this was one of the first times an African-American Civil Rights campaign had really got everyone's attention, and as an immediate, short term result of that achieved the first major steps of racial equality, with officials agreeing to remove 'Black only' and 'White only' signs on things, basically desegregating many major areas of society, a huge step forward. This of course was huge in the news, and the whole world knew, so, though probably more impacting in localised areas, this was inspiration for future human rights campaigns, as well as being a major event in general, so a primary influence to the almost equal society of today; a distinct, permanent, long term effect that is crucial and memorable.", 20, 200, 750, 500);
+fill(255);
+text("Taking place in Birmingham, and so its name, this was a series of peaceful protests launched by activists who wanted change. The thing that caused this campaign to be so successful was that these peaceful protests would be met with highly violent responses, like police dogs, fire hoses which had tremendously high pressure, and of course, the normal set of arrests. However, this was one of the first times an African-American Civil Rights campaign had really got everyone's attention, and as an immediate, short term result of that achieved the first major steps of racial equality, with officials agreeing to remove 'Black only' and 'White only' signs on things, basically desegregating many major areas of society, a huge step forward. This of course was huge in the news, and the whole world knew, so, though probably more impacting in localised areas, this was inspiration for future human rights campaigns, as well as being a major event in general, so a primary influence to the almost equal society of today; a distinct, permanent, long term effect that is crucial and memorable.", 20, 880, 750, 500);
+fill(115+bbw);
+text("Taking place in Birmingham, and so its name, this was a series of peaceful protests launched by activists who wanted change. The thing that caused this campaign to be so successful was that these peaceful protests would be met with highly violent responses, like police dogs, fire hoses which had tremendously high pressure, and of course, the normal set of arrests. However, this was one of the first times an African-American Civil Rights campaign had really got everyone's attention, and as an immediate, short term result of that achieved the first major steps of racial equality, with officials agreeing to remove 'Black only' and 'White only' signs on things, basically desegregating many major areas of society, a huge step forward. This of course was huge in the news, and the whole world knew, so, though probably more impacting in localised areas, this was inspiration for future human rights campaigns, as well as being a major event in general, so a primary influence to the almost equal society of today; a distinct, permanent, long term effect that is crucial and memorable.", 20, 540, 750, 500);
+if(bbc==0){
+bbw+=1/pow(((abs(bbw)+20)/60), 2);
+}
+else{
+bbw-=1/pow(((abs(bbw)+20)/60), 2);
+}
+if(bbw>80){
+bbc=1;
+}
+if(bbw<-80){
+bbc=0;
+}
+}
